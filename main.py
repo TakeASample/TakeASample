@@ -5,8 +5,9 @@ import os
 app = Flask(__name__)
 Misaka(app)
 
+section = 'python/basics/helloworld'
+
 def get_mds(section_name):
-    section = 'python/basics/helloworld'
     cheatsheets = []
     for md in os.listdir(f'./cheatsheets/{section_name}'):
         cheatsheets.append(str(md).replace('.md', ''))
@@ -26,8 +27,10 @@ def about():
 def cheat():
     global section
     with open(f'./cheatsheets/{section}.md', 'r') as f:
+        data_sec = section
         data = f.read()
-    return render_template('cheatsheet.html', data=data)
+    section='/python/basics/helloworld'
+    return render_template('cheatsheet.html', data=data, data_sec=data_sec)
 
 @app.route('/b')
 def b():
