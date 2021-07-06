@@ -8,6 +8,10 @@
 }
 
 .CheatInfo {
-    background-color: antiquewhite;
+    background-color: #E6E8E4;
     color: black;
+}
+
+.AboutInfo {
+    color: honeydew;
 }

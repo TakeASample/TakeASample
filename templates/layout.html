@@ -19,9 +19,17 @@
 					    <a class="nav-link" href="/about">About</a>
 				    </li>
                     <h5> Basics </h5>
-                    {% for md in mds %}
+                    {% for md in get_mds('python/basics') %}
 				    <li class="nav-item">
-					    <a class="nav-link" href="{{ url_for('b', section=md) }}">{{md}}</a>
+                    {% set md_sec = "python/basics/"+md %}
+					    <a class="nav-link" href="{{ url_for('b', section=md_sec) }}">{{md}}</a>
+				    </li>
+                    {% endfor %}
+                    <h5> OOP </h5>
+                    {% for md in get_mds('python/oop') %}
+				    <li class="nav-item">
+                    {% set md_sec = "python/oop/"+md %}
+					    <a class="nav-link" href="{{ url_for('b', section=md_sec) }}">{{md}}</a>
 				    </li>
                     {% endfor %}
                     
