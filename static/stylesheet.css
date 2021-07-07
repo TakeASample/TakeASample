@@ -19,3 +19,21 @@
 .nav-link-custom{
     color: white;
 }
+
+pre{
+display: block;
+margin-top: 0;
+margin-bottom: 1rem;
+overflow: auto;
+font-size: .875em;
+background-color: lightgray;
+align-items: center;
+padding-left: 15px;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: medium;
+    padding: 3px;
+}

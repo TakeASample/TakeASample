@@ -25,18 +25,12 @@ def about():
 
 @app.route('/cheat')
 def cheat():
-    global section
+    section = request.args.get('section', 'python/basics/helloworld')
     with open(f'./cheatsheets/{section}.md', 'r') as f:
         data_sec = section
         data = f.read()
     section='/python/basics/helloworld'
     return render_template('cheatsheet.html', data=data, data_sec=data_sec)
-
-@app.route('/b')
-def b():
-    global section
-    section = request.args.get('section', None)
-    return redirect(url_for('cheat'))
 
 if __name__ == '__main__':
     app.run(debug=True, port=5687, host='0.0.0.0')

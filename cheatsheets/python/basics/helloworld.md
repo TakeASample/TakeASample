@@ -2,6 +2,4 @@
 
 The Syntax for printing `hello world!` in python is
 
-```
-print('Hello World!')
-```
+    print('Hello world!)
