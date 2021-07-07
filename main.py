@@ -5,7 +5,6 @@ import os
 app = Flask(__name__)
 Misaka(app)
 
-section = 'python/basics/helloworld'
 
 def get_mds(section_name):
     cheatsheets = []
